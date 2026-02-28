@@ -1,9 +1,6 @@
 package com.example.medicalbackendorg.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Record {
@@ -22,8 +19,9 @@ public class Record {
 
     public Record() {}
 
-    public Record(String patientName, int age, String gender, String contactNumber,
-                  String doctorName, String diagnosis, String visitDate) {
+    public Record(String patientName, int age, String gender,
+                  String contactNumber, String doctorName,
+                  String diagnosis, String visitDate) {
         this.patientName = patientName;
         this.age = age;
         this.gender = gender;
@@ -34,20 +32,28 @@ public class Record {
     }
 
     // Getters & Setters
+
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
+
     public String getPatientName() { return patientName; }
     public void setPatientName(String patientName) { this.patientName = patientName; }
+
     public int getAge() { return age; }
     public void setAge(int age) { this.age = age; }
+
     public String getGender() { return gender; }
     public void setGender(String gender) { this.gender = gender; }
+
     public String getContactNumber() { return contactNumber; }
     public void setContactNumber(String contactNumber) { this.contactNumber = contactNumber; }
+
     public String getDoctorName() { return doctorName; }
     public void setDoctorName(String doctorName) { this.doctorName = doctorName; }
+
     public String getDiagnosis() { return diagnosis; }
     public void setDiagnosis(String diagnosis) { this.diagnosis = diagnosis; }
+
     public String getVisitDate() { return visitDate; }
     public void setVisitDate(String visitDate) { this.visitDate = visitDate; }
 }

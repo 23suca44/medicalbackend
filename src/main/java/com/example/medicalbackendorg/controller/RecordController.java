@@ -8,7 +8,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/records")
-@CrossOrigin(origins = "*") // allow React frontend
+@CrossOrigin(origins = "*")
 public class RecordController {
 
     private final RecordRepository repository;
