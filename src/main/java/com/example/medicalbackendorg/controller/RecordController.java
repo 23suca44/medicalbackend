@@ -8,7 +8,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/records")
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "https://medicalfrontend.vercel.app")
 public class RecordController {
 
     private final RecordRepository repository;
